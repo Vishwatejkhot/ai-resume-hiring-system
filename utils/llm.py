@@ -1,26 +1,22 @@
 from langchain_groq import ChatGroq
-import time
 import streamlit as st
-#import os
-#from dotenv import load_dotenv
+import time
 
-#load_dotenv()
 
 def get_llm():
+    api_key = st.secrets["GROQ_API_KEY"]
 
     llm = ChatGroq(
-        #groq_api_key=os.getenv("GROQ_API_KEY"),
-        api_key = st.secrets["GROQ_API_KEY"]
+        groq_api_key=api_key,
         model="openai/gpt-oss-120b",
         temperature=0,
         max_tokens=800
     )
 
-    return llm  
+    return llm
 
 
 def safe_invoke(llm, prompt):
-
     while True:
         try:
             return llm.invoke(prompt)
@@ -28,9 +24,7 @@ def safe_invoke(llm, prompt):
         except Exception as e:
 
             if "rate_limit" in str(e):
-
                 print("Rate limit reached. Waiting 10 seconds...")
-
                 time.sleep(10)
 
             else:
