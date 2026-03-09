@@ -1,0 +1,14 @@
+langchain
+langgraph
+langchain-community
+sentence-transformers
+faiss-cpu
+streamlit
+pypdf
+scikit-learn 
+langchain-groq  
+langchain_huggingface 
+python-dotenv 
+langchain_core
+plotly 
+requests
