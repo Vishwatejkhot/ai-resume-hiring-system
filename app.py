@@ -19,6 +19,7 @@ st.set_page_config(
     page_icon="🤖",
     layout="wide"
 )
+st.write("Secret loaded:", "GROQ_API_KEY" in st.secrets)
 
 # -----------------------------
 # CUSTOM CSS
