@@ -16,6 +16,14 @@ analysis, candidate ranking, and job matching**.
 
 ------------------------------------------------------------------------
 
+## 🌐 Live Demo
+
+🚀 Try the deployed application here:
+
+👉 https://ai-resume-hiring-system.streamlit.app 
+
+------------------------------------------------------------------------
+
 # 🚀 Features
 
 ### 📄 Resume Ingestion
